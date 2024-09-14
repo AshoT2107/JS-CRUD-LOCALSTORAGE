@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        align-items: flex-start;
+        gap: 20px;
+      }
+      .flex-column {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table th {
+        border-bottom: 1px solid #e4e4e4;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="flex-column">
+        <h3>Yangi mahsulot</h3>
+        <input type="text" name="name" placeholder="Nomini kiriting" />
+        <input type="number" name="count" placeholder="Soni" />
+        <input type="number" name="price" placeholder="Narxi" />
+        <select name="category">
+          <option value="">Turini tanlang</option>
+          <option value="Ozuqa">Ozuqa</option>
+          <option value="Texnika">Texnika</option>
+          <option value="Mebel">Mebel</option>
+        </select>
+        <button onclick="add()">Saqlash</button>
+      </div>
+      <table>
+        <thead>
+          <th>№</th>
+          <th>Nomi</th>
+          <th>Turi</th>
+          <th>Soni</th>
+          <th>Narxi</th>
+          <th>Umumiy</th>
+          <th></th>
+        </thead>
+        <tbody id="products"></tbody>
+      </table>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
